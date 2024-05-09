@@ -12,7 +12,8 @@
 
 #contenedor-login {
     height: 100vh;
-    background:#c0c0c0;
+    background: rgb(241,255,0);
+background: linear-gradient(90deg, rgba(241,255,0,1) 0%, rgba(255,171,0,1) 51%);
     display: flex;
     justify-content: center;
     align-items: center;

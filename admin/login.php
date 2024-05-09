@@ -37,10 +37,11 @@ if (isset($_POST['iniciar'])) {
 <body>
     <div id="contenedor-login">
         <div class="presentacion">
-            <div class="titulo">
-                <h1>FINCASOL</h1>
-                <p>Sistema de Administración Web Para Inmobiliaria</p>
-            </div>
+        <div class="titulo">
+    <img src="../img/logo.png" alt="Descripción de la imagen" style="width: 500px; height: auto;">
+    <p>Sistema de Administración Web Inmobiliaria</p>
+    </div>
+
             <div class="contenedor-formulario">
                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" class="form-login">
                     <p>Iniciar sesión como <strong>administrador</strong> </p>

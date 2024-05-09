@@ -19,8 +19,8 @@
     position: fixed;
     width: 75px;
     height: 60px;
-    bottom: 17px;
-    left: 20px; /* Cambiado de "right" a "left" */
+    bottom: 90px;
+    right: 20px; /* Cambiado de "right" a "left" */
     background-color: #25d366;
     color: #FFF;
     border-radius: 50px;
@@ -91,43 +91,45 @@ h3 {
 </head>
 <body>
     <footer>
-<script>
-  window.addEventListener('mouseover', initLandbot, { once: true });
-  window.addEventListener('touchstart', initLandbot, { once: true });
+<!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
 
-  var myLandbot;
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-  function initLandbot() {
-    if (!myLandbot) {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.addEventListener('load', function () {
-        var myLandbot = new Landbot.Livechat({
-          configUrl:
-            'https://storage.googleapis.com/landbot.online/v3/H-1787257-5EC7IZ846L85LNRQ/index.json',
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "155303744342286");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v19.0'
         });
-      });
-      s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
+      };
 
-      // Agrega estilo para ajustar la posición del botón
-      var style = document.createElement('style');
-      style.innerHTML = '.custom-button { margin-top: 10px; }'; // Ajusta el valor según sea necesario
-      document.head.appendChild(style);
-    }
-  }
-</script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
     <div class="footer__copyright__text">
-				<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Todos los Derechos Reservados -<a href="https://lysoftdigital.vercel.app/" target="_blank"> Lysoft Digital</a></p>
+				<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Todos los Derechos Reservados -<a href="https://lysoftdigital.com/" target="_blank"> Lysoft Digital</a></p>
 			</div>
     </footer>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://api.whatsapp.com/send?phone=51989969317&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<a href="https://api.whatsapp.com/send?phone=51989969317&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Las Propieades" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
 

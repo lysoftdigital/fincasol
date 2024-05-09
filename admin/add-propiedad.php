@@ -84,6 +84,12 @@ if (isset($_POST['agregar'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css">
+    <style>
+    .cambiar-foto-label {
+        color: #ff0000; /* Cambia esto al color que desees */
+        /* Otros estilos que desees aplicar */
+    }
+</style>
     <script>
         function muestraselect(str) {
             var conexion;
@@ -202,28 +208,91 @@ if (isset($_POST['agregar'])) {
                     </div>
 
 
-                    <div>
-                        <h2>Galería de fotos</h2>
 
-                        <label for="foto1" class="btn-fotos"> Foto Principal</label>
+
+
+
+
+                    
+
+                    <div class="">
+                        <h2>Galería de fotos</h2>
+                        <br>
+
+                        <label for="foto1" class="btn-fotos"> Añadir Foto Principal</label>
+                        <label for="foto1" class="btn-fotos" style="background-color: #997300;">Cambiar foto</label>
                         <output id="list" class="contenedor-foto-principal">
                             <img src="<?php echo $propiedad['url_foto_principal'] ?>" alt="">
                         </output>
                         <input type="file" id="foto1" accept="image/*" name="foto1" style="display:none">
                     </div>
 
-                    <div>
-                        <label for="fotos" class="btn-fotos"> Galería de Fotos </label>
-
-                        <div id="contenedor-fotos-publicacion">
-
-                        </div>
 
 
-                        <input type="file" id="fotos" accept="image/*" name="fotos[]" value="Foto" multiple="" required style="display:none">
-                    </div>
 
 
+                    <h2>Añadir más fotos</h2>
+                        <br>          
+                        <style>
+    .oculto {
+        display: none;
+    }
+</style>
+
+<div>
+    <label for="fotos" class="btn-fotos">Galería de Fotos</label>
+    <label for="fotos" class="btn-fotos" style="background-color: #997300;">Cambiar foto</label>
+    <div id="contenedor-fotos-publicacion"></div>
+
+    <input type="file" id="fotos" accept="image/*" name="fotos[]" value="Foto" multiple="" required style="display:none">
+
+    <!-- Cambiar el botón por un label estilizado -->
+    <label for="eliminar-fotos" class="btn-fotos oculto" style="background-color: #8B0000;">Eliminar Fotos</label>
+    <input type="checkbox" id="eliminar-fotos" style="display:none" onchange="eliminarTodasLasFotos()">
+</div>
+
+<script>
+    function eliminarTodasLasFotos() {
+        // Obtener el contenedor de fotos
+        var contenedorFotos = document.getElementById("contenedor-fotos-publicacion");
+
+        // Eliminar todas las fotos dentro del contenedor
+        contenedorFotos.innerHTML = "";
+
+        // Opcional: Restablecer el valor del input de tipo file para permitir volver a seleccionar las fotos
+        var inputFotos = document.getElementById("fotos");
+        inputFotos.value = "";
+
+        // Opcional: Desmarcar el checkbox después de eliminar las fotos
+        var checkboxEliminar = document.getElementById("eliminar-fotos");
+        checkboxEliminar.checked = false;
+
+        // Opcional: Agregar o quitar la clase 'oculto' para mostrar u ocultar el botón de eliminar
+        var labelEliminar = document.querySelector("label[for=eliminar-fotos]");
+        labelEliminar.classList.toggle("oculto", contenedorFotos.innerHTML.trim() === "");
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+                    
                     <h2>Ubicación y datos del Propietario</h2>
                     <div class="fila">
                         <div class="box">
@@ -271,6 +340,7 @@ if (isset($_POST['agregar'])) {
             window.location.href = 'index.php';
         </script>
     <?php endif ?>
+    
 
     <script>
         $('#link-add-propiedad').addClass('pagina-activa');
@@ -278,6 +348,7 @@ if (isset($_POST['agregar'])) {
 
     <script src="subirfoto.js"></script>
     <script src="scriptFotos.js"></script>
+    <script src="scriptFotosNuevas.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 <?php
-
 include("funciones.php");
 
 $config = obtenerConfiguracion();
@@ -7,8 +6,8 @@ $config = obtenerConfiguracion();
 $result_ciudades = ObtenerTodasLasCiudades();
 
 $result_tipos = obtenerTodosLosTipos();
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +19,19 @@ $result_tipos = obtenerTodosLosTipos();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css">
     <link rel="icon" href="./img/logoico.ico" type="image/x-icon">
+
 </head>
 
 <body class="home" id="home">
+
     <div class="container">
         <?php include("header.php");?>
 
-        <h2 style="color: white; text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);">Casas, terrenos y departamentos al mejor precio</h2>
-
-
-
+        <h2 style="color: white; text-shadow: 2px 2px 6px rgba( 0.1,  0.1,  0.1, 0.5), 6px 6px 12px rgba(0, 0, 0, 0.7); font-family: 'Georgia', serif;">¡ASESORES Y CONSULTORES INMOBILIARIOS!</h2>
 
         <div class="box-buscar-propiedades pos-inferior">
             <div class="box-interior">
+
                 <p>Encuentra la propiedad que busca</p>
                 <form action="busqueda.php" method="get">
                     <select name="ciudad" id="">
@@ -53,7 +52,7 @@ $result_tipos = obtenerTodosLosTipos();
                     </select>
                     <div class="estado">
                         <span>
-                            <input type="radio" value="Alquiler" name="estado" checked  ="true"> Alquiler
+                            <input type="radio" value="Alquiler" name="estado" checked="true"> Alquiler
                         </span>
                         <span>
                             <input type="radio" value="Venta" name="estado"> Venta
@@ -63,16 +62,15 @@ $result_tipos = obtenerTodosLosTipos();
                     <input type="submit" value="Buscar" name="buscar">
                 </form>
             </div>
+            
         </div>
-        
+
         <footer class="inferior">
             <?php include("contenido-footer.php")?>
-
         </footer>
-
     </div>
-</body>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
 
 </html>

@@ -309,6 +309,15 @@ if (isset($_POST['actualizar'])) {
                         </div>
                     </div>
 
+
+
+
+
+
+                    
+
+
+
                     <h2>Galería de Fotos</h2>
                     <div class="">
                         
@@ -321,8 +330,9 @@ if (isset($_POST['actualizar'])) {
                         <input type="hidden" id="fotoPrincipalActualizada" name="fotoPrincipalActualizada">
                     </div>
 
+                    
                     <div>
-                        <p>Galería ( <label for="fotos" class="btn-cambiar-foto">Agregar mas Fotos</label>)</p>
+                        <p>Galería ( <label for="fotos" class="btn-cambiar-foto">Agregar más Fotos</label>)</p>
                         <input type="hidden" id="fotosAEliminar" name="fotosAEliminar">
                         <div id="contenedor-fotos-publicacion">
                             <?php

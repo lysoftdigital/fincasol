@@ -69,7 +69,10 @@ $config = obtenerConfiguracion();
                 </form>
             </div>
             <div class="col">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3476.9558109071627!2d-66.34241857118006!3d-33.28432508428671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1645188876080!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d316.42293210993677!2d-77.05760449132787!3d-11.946415181382637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDU2JzQ3LjQiUyA3N8KwMDMnMjcuMiJX!5e0!3m2!1ses!2spe!4v1699493332690!5m2!1ses!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+
             </div>
 
         </div>
